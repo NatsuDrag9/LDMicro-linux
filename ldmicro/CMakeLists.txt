@@ -47,14 +47,6 @@ IF(UNIX)
     MESSAGE ( STATUS " PROJECT_INCLUDE_DIR: " ${PROJECT_INCLUDE_DIR} )
 
 
-<<<<<<< HEAD
-## Dummy compile and install to test linuxUI
-## to compile LDmicro uncomment the below 2 lines
-#add_executable (LDMicro ldmicro.cpp)# miscutil.cpp draw_outputdev.cpp)
-# install (TARGETS LDMicro DESTINATION bin)
-add_executable (linuxUI linuxUI.cpp testMain.cpp)
-install (TARGETS linuxUI DESTINATION bin)
-=======
     # Add GTK3 include files if GTK3 is found
     IF ( GTK3_FOUND )
         include_directories (${GTK3_INCLUDE_DIRS})
@@ -76,4 +68,3 @@ install (TARGETS linuxUI DESTINATION bin)
     target_link_libraries (testMain FreezeLD)
     install (TARGETS testMain DESTINATION bin)
 ENDIF(UNIX)
->>>>>>> e4f9a3efd46347f3bbe0b14d64ec9ed49c8bf1c8
