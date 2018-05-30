@@ -1,4 +1,4 @@
-#include "linuxUI/linuxUI.h"
+#include "linuxUI.h"
 
 /// Menu Variables
 HWID window;
@@ -39,9 +39,13 @@ int ScrollHeight;                                            // Height of scroll
 HWID IoList;                                                 // Window for list view
 
 /// Wraper function for gtk_window_has_toplevel_focus
-BOOL isFocus(HWND window)
+BOOL isFocus(HWID window)
 {
+<<<<<<< HEAD:ldmicro/linuxUI.cpp
     return (BOOL) gtk_window_has_toplevel_focus(GTK_WINDOW(window));
+=======
+    return (BOOL) gtk_window_has_toplevel_focus(GTK_WINDOW(gtk_widget_get_parent_window(GTK_WIDGET(window))));
+>>>>>>> e4f9a3efd46347f3bbe0b14d64ec9ed49c8bf1c8:ldmicro/lib/linuxUI/linuxUI.cpp
 }
 
 COLORREF RGB(int red, int green, int blue)
